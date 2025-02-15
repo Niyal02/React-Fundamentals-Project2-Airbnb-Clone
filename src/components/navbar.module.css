@@ -1,0 +1,10 @@
+
+.navbar{
+    display: flex;
+    height: 60px; 
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.12);  /* 0 is horizontal, 5 vertical, 7 blur radius, rgba color */
+}
+
+.logo_image{
+    padding: 12px 19px;   /* 10px top and bottom, 15px left and right */
+}

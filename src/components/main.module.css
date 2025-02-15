@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    display: flex;
+    height: 9cm;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.content{
+    margin-top: 30px;
+    margin-inline: auto;  /* horizontally aligns items from left and right, if its used no need to do mt or ml */
+    width: 90%;
+}
