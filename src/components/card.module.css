@@ -1,12 +1,30 @@
-.card{
+.card_container{
     width: 250px;
     font-size: 13px;
+    display: flex;
+    gap: 40px;
 }
 
-.katie{
+/* .card_container > div{
+    border-right: 1px solid gray;
+    padding: 5px;
+}
+
+.card_container > div:last-child{
+    border-right: none;
+} */
+
+
+.katie_img{
     height: 250px;
     border-radius: 10px;
+    margin-top: 15px;
 }
+
+/* .sold_out{
+    color: black;
+    border: 10px gray;
+} */
 
 .card_stats{
     display: flex;
