@@ -1,96 +1,25 @@
-import classes from './card.module.css'
-import reactinternproj2katie from '../assets/reactintern-proj2-katie.png'
-import star from '../assets/star.png'
+import classes from "./card.module.css";
+import star from "../assets/star.png";
 
-function Card() {
+function Card(props) {
   return (
     <div className={classes.card_container}>
       <div>
-      <img src={reactinternproj2katie} className={classes.katie_img} alt="" />
-      <p className={classes.sold_out}>Sold Out</p>   {/* z index use where position absolute and reltive is used*/}
-      <div className={classes.card_stats}>
-        <img src={star} className={classes.card_star} alt="" />
-        <span >4.8</span>
-        <span className={classes.gray}>(6) . </span>
-        <span className={classes.gray}> USA</span>
-      </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p className={classes.bold}>From $125 / person</p>
-      </div>
-
-      <div>
-        <img src={reactinternproj2katie} className={classes.katie_img} alt="" />
-      <div className={classes.card_stats}>
-        <img src={star} className={classes.card_star} alt="" />
-        <span >4.8</span>
-        <span className={classes.gray}>(6) . </span>
-        <span className={classes.gray}> USA</span>
-      </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p className={classes.bold}>From $125 / person</p>
-      </div>
-
-      <div>
-        <img src={reactinternproj2katie} className={classes.katie_img} alt="" />
-      <div className={classes.card_stats}>
-        <img src={star} className={classes.card_star} alt="" />
-        <span >4.8</span>
-        <span className={classes.gray}>(6) . </span>
-        <span className={classes.gray}> USA</span>
-      </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p className={classes.bold}>From $125 / person</p>
-      </div>
-
-      <div>
-        <img src={reactinternproj2katie} className={classes.katie_img} alt="" />
-      <div className={classes.card_stats}>
-        <img src={star} className={classes.card_star} alt="" />
-        <span >4.8</span>
-        <span className={classes.gray}>(6) . </span>
-        <span className={classes.gray}> USA</span>
-      </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p className={classes.bold}>From $125 / person</p>
-      </div>
-
-      <div>
-        <img src={reactinternproj2katie} className={classes.katie_img} alt="" />
-      <div className={classes.card_stats}>
-        <img src={star} className={classes.card_star} alt="" />
-        <span >4.8</span>
-        <span className={classes.gray}>(6) . </span>
-        <span className={classes.gray}> USA</span>
-      </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p className={classes.bold}>From $125 / person</p>
-      </div>
-
-      <div>
-        <img src={reactinternproj2katie} className={classes.katie_img} alt="" />
-      <div className={classes.card_stats}>
-        <img src={star} className={classes.card_star} alt="" />
-        <span >4.8</span>
-        <span className={classes.gray}>(6) . </span>
-        <span className={classes.gray}> USA</span>
-      </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p className={classes.bold}>From $125 / person</p>
-      </div>
-
-      <div>
-        <img src={reactinternproj2katie} className={classes.katie_img} alt="" />
-      <div className={classes.card_stats}>
-        <img src={star} className={classes.card_star} alt="" />
-        <span >4.8</span>
-        <span className={classes.gray}>(6) . </span>
-        <span className={classes.gray}> USA</span>
-      </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p className={classes.bold}>From $125 / person</p>
+        <div style={{ width: "100%" }}>
+          <img src={props.img} className={classes.images} alt="" />
+        </div>
+        <p className={classes.availability}>Sold Out</p> {/* z index use where position absolute and relative is used*/}
+        <div className={classes.card_stats}>
+          <img src={star} className={classes.card_star} alt="" />
+          <span>{props.rating}</span>
+          <span className={classes.gray}>({props.reviewCount}) . </span>
+          <span className={classes.gray}> {props.country}</span>
+        </div>
+        <p>{props.title}</p>
+        <p className={classes.bold}>From ${props.price}</p>
       </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
